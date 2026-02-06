@@ -2,7 +2,13 @@
 
 This is my **highly** niche extension to provide syntax highlighting for the SDEV pseudocode syntax.
 
-![Basic Use](img/basic-use-optimized.gif)
+<!-- 
+
+![Basic Use](https://github.com/Jeff-Barlow-Spady/sdev-pseudocode/blob/fe9de49a238ab8f7c43962c30d264017805605df/img/basic-use-optimized.gif)
+
+ -->
+
+![Basic Use](https://raw.githubusercontent.com/Jeff-Barlow-Spady/sdev-pseudocode/main/img/basic-use-optimized.gif)
 
 ## Features
 
