@@ -2,7 +2,7 @@
 
 This is my ~highly niche~ extension to provide syntax highlighting for the SDEV pseudocode syntax.
 
-![Basic Use](img/basic-use.gif)
+![Basic Use](img/basic-use.mp4)
 
 ## Features
 
