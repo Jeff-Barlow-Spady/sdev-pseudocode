@@ -1,6 +1,6 @@
 # SDEV PSEUDOCODE
 
-This is my **highly** niche extension to provide syntax highlighting for the SDEV pseudocode syntax.
+This is my **highly** niche extension to provide syntax highlighting for the SDEV pseudocode syntax for VSCode.
 
 <!-- 
 
