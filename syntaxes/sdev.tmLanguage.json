@@ -1,0 +1,53 @@
+{
+    "scopeName": "source.sdev",
+    "name": "SDEV Pseudocode",
+    "fileTypes": [
+        "sdev"
+    ],
+    "patterns": [
+        {
+            "name": "keyword.control.sdev",
+            "match": "\\b(IF|ELSE|SET|CALL|WHILE|FOR|RETURN|FUNCTION|ENDFUNCTION|START|END|INPUT|OUTPUT|PRINT|DISPLAY|DECLARE|INITIALIZE|RETURN|REPEAT|ELSE-IF|ELSE|THEN|IF-THEN|ENDIF|DO-UNTIL|ENDWHILE|REPEAT-UNTIL|ENDFOR)\\b"
+        },
+        {
+            "name": "keyword.operator.math.sdev",
+            "match": "[\\+|\\-|\\*|\\/|\\=|MOD]"
+        },
+        {
+            "name": "keyword.operator.logical.sdev",
+            "match": "\\b(AND|OR|NOT)\\b"
+        },
+        {
+            "name": "keyword.operator.comparison.sdev",
+            "match": "\\b(==|!=|<|>|<=|>=)\\b"
+        },
+        {
+            "name": "entity.name.function.sdev",
+            "match": "\\b[a-z]+([A-Z][a-z0-9]+)+(?=\\s*\\()\\b"
+        },
+        {
+            "name": "variable.other.sdev",
+            "match": "\\b[a-z]+([A-Z][a-z0-9]+)+\\b"
+        },
+        {
+            "name": "constant.numeric.sdev",
+            "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        {
+            "name": "string.quoted.double.sdev",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.sdev",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        {
+            "name": "comment.line.double-slash.sdev",
+            "begin": "//",
+            "end": "$\\n?"
+        }
+    ]
+}

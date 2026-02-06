@@ -1,0 +1,40 @@
+{
+  "name": "sdev",
+  "displayName": "sdev-pcode",
+  "description": "a highly niche extension for NAIT SDEV students who care about pretty pseudocode",
+  "version": "0.0.1",
+  "publisher": "jbarlowspady1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "sdev",
+        "aliases": [
+          "SDEV Pseudocode",
+          "sdev"
+        ],
+        "extensions": [
+          ".sdev",
+          ".pcode"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sdev",
+        "scopeName": "source.sdev",
+        "path": "./syntaxes/sdev.tmLanguage.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "@vscode/vsce": "^3.7.1",
+    "package": "^1.0.1"
+  }
+}
