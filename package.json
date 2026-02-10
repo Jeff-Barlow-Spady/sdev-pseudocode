@@ -2,7 +2,7 @@
   "name": "sdev",
   "displayName": "sdev-pcode",
   "description": "a highly niche extension for NAIT SDEV students who care about pretty pseudocode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "jbarlowspady1",
   "engines": {
     "vscode": "^1.109.0"
