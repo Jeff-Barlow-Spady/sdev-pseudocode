@@ -1,39 +1,79 @@
 {
-    "scopeName": "source.sdev",
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "SDEV Pseudocode",
-    "fileTypes": [
-        "sdev"
-    ],
     "patterns": [
         {
-            "name": "keyword.control.sdev",
-            "match": "\\b(IF|ELSE|SET|CALL|WHILE|FOR|RETURN|FUNCTION|ENDFUNCTION|START|END|INPUT|OUTPUT|PRINT|DISPLAY|DECLARE|INITIALIZE|RETURN|REPEAT|ELSE-IF|ELSE|THEN|IF-THEN|ENDIF|DO-UNTIL|ENDWHILE|REPEAT-UNTIL|ENDFOR)\\b"
+            "include": "#comments"
         },
         {
-            "name": "keyword.operator.math.sdev",
-            "match": "[\\+|\\-|\\*|\\/|\\=|MOD]"
+            "include": "#strings"
         },
         {
-            "name": "keyword.operator.logical.sdev",
-            "match": "\\b(AND|OR|NOT)\\b"
+            "include": "#keywords"
         },
         {
-            "name": "keyword.operator.comparison.sdev",
-            "match": "\\b(==|!=|<|>|<=|>=)\\b"
+            "include": "#operators"
         },
         {
-            "name": "entity.name.function.sdev",
-            "match": "\\b[a-z]+([A-Z][a-z0-9]+)+(?=\\s*\\()\\b"
+            "include": "#functions"
         },
         {
-            "name": "variable.other.sdev",
-            "match": "\\b[a-z]+([A-Z][a-z0-9]+)+\\b"
+            "include": "#numbers"
         },
         {
-            "name": "constant.numeric.sdev",
-            "match": "\\b\\d+(\\.\\d+)?\\b"
+            "include": "#variables"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.sdev",
+                    "match": "\\b(IF|ELSE|WHILE|FOR|RETURN|FUNCTION|ENDFUNCTION|START|END|INPUT|OUTPUT|PRINT|DISPLAY|DECLARE|INITIALIZE|REPEAT|ELSE-IF|THEN|IF-THEN|ENDIF|DO-UNTIL|ENDWHILE|REPEAT-UNTIL|ENDFOR|CALL|SET)\\b"
+                }
+            ]
         },
-        {
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.comparison.sdev",
+                    "match": "(==|!=|<=|>=|<|>)"
+                },
+                {
+                    "name": "keyword.operator.logical.sdev",
+                    "match": "\\b(AND|OR|NOT)\\b"
+                },
+                {
+                    "name": "keyword.operator.math.sdev",
+                    "match": "[\\+\\-\\*\\/\\=]|\\bMOD\\b"
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.sdev",
+                    "match": "\\b[a-z]+([A-Z][a-z0-9]+)+(?=\\s*\\()\\b"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.other.sdev",
+                    "match": "\\b[a-z]+([A-Z][a-z0-9]+)+\\b"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.sdev",
+                    "match": "\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        },
+        "strings": {
             "name": "string.quoted.double.sdev",
             "begin": "\"",
             "end": "\"",
@@ -44,10 +84,15 @@
                 }
             ]
         },
-        {
-            "name": "comment.line.double-slash.sdev",
-            "begin": "//",
-            "end": "$\\n?"
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.sdev",
+                    "begin": "//",
+                    "end": "$\\n?"
+                }
+            ]
         }
-    ]
+    },
+    "scopeName": "source.sdev"
 }
